@@ -22,6 +22,15 @@ catkin build
 source ~/.bashrc
 ```
 
+#### Rewrite
+```
+cd ~/icart_mini/icart_mini_driver/launch
+vi icart_mini_drive.launch
+```
+<arg name="scan_dev"            default="/dev/sensors/hokuyo_urg" unless="$(arg use_eth_urg)"/>
+>>>
+<arg name="scan_dev"            default="/dev/sensors/hokuyo_H0803606" unless="$(arg use_eth_urg)"/>
+
 ### Excecution
 
 On simulator (gazebo)  
