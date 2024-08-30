@@ -9,3 +9,4 @@ TrajectoryPlannerROS:
   min_vel_theta: -2.0
   yaw_goal_tolerance: 0.5
   xy_goal_tolerance: 0.4
+  sim_time: 3.4
