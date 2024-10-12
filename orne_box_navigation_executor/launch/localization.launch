@@ -4,12 +4,14 @@
   <arg name="robot_name"    default="alpha"/>
   <arg name="map_file"      default="$(find orne_box_navigation_executor)/maps/mymap"/>
   <arg name="init_pos_file" default="$(find orne_box_navigation_executor)/initial_pose_cfg/initial_pose.yaml"/>
-  <arg name="emcl"          default="false"/>
+  <arg name="emcl"          default="mode0"/>
 
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file).yaml"/>
 
   <!-- AMCL -->
-  <group unless="$(arg emcl)">
+  <!--group unless="$(arg emcl)"-->
+  <!--group unless="$(eval arg('emcl') == '1' or arg('emcl') == '2')"-->
+  <group unless="$(eval emcl=='mode1' or emcl=='mode2')">
     <node pkg="amcl" type="amcl" name="amcl" output="screen">
       <rosparam file="$(find orne_box_navigation_executor)/param/localization_params.yaml" command="load"/>
       <rosparam file="$(find orne_box_navigation_executor)/param/localization_params_$(arg robot_name).yaml" command="load"/>
@@ -18,11 +20,24 @@
   </group>
 
   <!-- EMCL -->
-  <group if="$(arg emcl)">
+  <!--group if="$(arg emcl)"-->
+  <!--group if="$(eval int(arg('emcl')) == 1)"-->
+  <group if="$(eval emcl=='mode1')">
     <node pkg="emcl" type="emcl_node" name="emcl_node" output="screen">
       <rosparam file="$(find orne_box_navigation_executor)/param/emcl_params.yaml" command="load"/>
       <rosparam file="$(arg init_pos_file)" command="load"/>
     </node>
   </group>
+
+  <!-- EMCL2 -->
+  <!--group if="$(eval int(arg('emcl')) == 2)"-->
+  <group if="$(eval emcl=='mode2')">
+    <node pkg="emcl2" type="emcl2_node" name="emcl2_node" output="screen">
+      <rosparam file="$(find orne_box_navigation_executor)/param/emcl2_params.yaml" command="load"/>
+      <rosparam file="$(arg init_pos_file)" command="load"/>
+    </node>
+  </group>
+
+
 
 </launch>
