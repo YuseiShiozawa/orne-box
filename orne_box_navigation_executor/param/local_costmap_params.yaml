@@ -9,5 +9,5 @@ local_costmap:
   width: 8.0
   height: 8.0
   transform_tolerance: 0.5
-  inflation_radius: 0.20
-
+  inflation_radius: 1.20 #0.20
+  cost_scaling_factour: 0.9 #default 10
