@@ -1,5 +1,5 @@
 odom_freq                      : 20
-num_particles                  : 500
+num_particles                  : 1000 #500
 
 odom_frame_id                  : odom
 footprint_frame_id             : base_link
