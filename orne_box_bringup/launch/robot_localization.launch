@@ -1,0 +1,6 @@
+<launch>
+  <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization" output="screen">
+    <param name="config_file" value="$(find orne_box_bringup)/robot_localization/ekf.yaml" />
+  </node>
+</launch>
+
