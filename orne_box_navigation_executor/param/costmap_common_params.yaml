@@ -1,7 +1,7 @@
 max_obstacle_height: 0.60 # assume something like an arm is mounted on top of the robot
 obstacle_range: 10.5   #8.0
 raytrace_range: 10.5     #9.0
-inflation_radius: 1.2 #0.50  global_costmap_inflation_radius
+inflation_radius: 0.6 #0.50, 1.2  global_costmap_inflation_radius
 cost_scaling_factor: 0.9 #default 10
 #use_maximum: true #new
 #use_unko: true #test
