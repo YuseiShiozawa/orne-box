@@ -5,6 +5,17 @@ ekf_filter_node:
         two_d_mode: true
         transform_time_offset: 0.0
         transform_timeout: 0.0
+        print_diagnostics: true
+
+        debug: false
+        #debug_out_file: /path/to/debug/file.txt
+
+        permit_corrected_publication: false
+
+        publish_acceleration: true
+
+        publish_tf: true
+
         map_frame: map              # Defaults to "map" if unspecified
         odom_frame: odom            # Defaults to "odom" if unspecified
         base_link_frame: base_link # Defaults to "base_link" if unspecified
@@ -17,3 +28,4 @@ ekf_filter_node:
                         true , true, true,
                         true, true, true,
                         false, false, false]
+        odom0_differential: true
