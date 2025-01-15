@@ -1,0 +1,24 @@
+<launch>
+    <!-- iCart Mini Gazeboの起動 -->
+    <include file="$(find icart_mini_gazebo)/launch/icart_mini.launch">
+        <!-- GUIの有効化 -->
+        <arg name="gui" value="true"/>
+        <!-- モデルの指定（orne_boxのURDFを読み込む） -->
+        <arg name="model" value="$(find xacro)/xacro '$(find orne_box_description)/urdf/orne_box.urdf.xacro'"/>
+        <!-- 使用するワールドファイルを指定 -->
+        <arg name="world" value="$(find map2gazebo)/worlds/map.sdf"/>
+    </include>
+
+  <!-- Start Gazebo with a blank world -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+      <arg name="paused" value="false"/>
+      <arg name="use_sim_time" value="true"/>
+      <arg name="headless" value="$(arg headless)"/>
+      <arg name="world_name" value="$(find map2gazebo)/worlds/map.sdf"/>
+    </include>
+
+
+    <!-- orne_box_bringupパッケージのbase.launch.xmlを読み込む -->
+    <include file="$(find orne_box_bringup)/launch/includes/base.launch.xml"/>
+</launch>
+
