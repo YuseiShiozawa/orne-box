@@ -1,31 +1,30 @@
-ekf_filter_node:
-    ros__parameters:
-        frequency: 40.0
-        sensor_timeout: 0.5
-        two_d_mode: true
-        transform_time_offset: 0.0
-        transform_timeout: 0.0
-        print_diagnostics: true
+ekf_localization_node:
+  frequency: 30  # EKF の更新頻度 [Hz]
+  two_d_mode: true  # 2D モード (Z軸の動きを無視)
+  publish_tf: true  # odom -> base_link の TF を配信する
 
-        debug: false
-        #debug_out_file: /path/to/debug/file.txt
+  # センサーデータのトピック
+  odom0: /icart_mini/odom
+  odom0_config: [true, true, false,  # x, y, z
+                 false, false, true, # roll, pitch, yaw
+                 true, true, false,  # vx, vy, vz
+                 false, false, true, # vroll, vpitch, vyaw
+                 false, false, false] # ax, ay, az
 
-        permit_corrected_publication: false
+  imu0: /imu/data
+  imu0_config: [false, false, false,  # x, y, z
+                true, true, true,    # roll, pitch, yaw
+                false, false, false, # vx, vy, vz
+                true, true, true,    # vroll, vpitch, vyaw
+                true, true, true]    # ax, ay, az
+  imu0_differential: false
+  imu0_remove_gravitational_acceleration: true
 
-        publish_acceleration: true
+  # 出力される座標系 (TF)
+  map_frame: map
+  odom_frame: odom
+  base_link_frame: base_link
+  world_frame: odom  # 位置の基準座標系 (通常 `odom`)
 
-        publish_tf: true
-
-        map_frame: map              # Defaults to "map" if unspecified
-        odom_frame: odom            # Defaults to "odom" if unspecified
-        base_link_frame: base_link # Defaults to "base_link" if unspecified
-        world_frame: odom           # Defaults to the value of odom_frame if unspecified
-        
-#         #<wheel_odom>
-        odom0: /icart_mini/odom
-        odom0_config:   [false, false, false,
-                        false, false, false,
-                        true , true, true,
-                        true, true, true,
-                        false, false, false]
-        odom0_differential: true
+  # 初期状態の共分散行列 (低い値ほど確信度が高い)
+  initial_covariance: [1e-9, 0, 0, 0, 0, 0, 0, 1e-9, 0, 0, 0, 0, 0, 0, 1e-9, 0, 0, 0, 0, 0, 0, 1e-9, 0, 0, 0, 0, 0, 0, 1e-9]

@@ -1,0 +1,4 @@
+<launch>
+    <node name="path_publisher" pkg="orne_box_navigation_executor" type="amcl_path_publisher.py" output="screen"/>
+</launch>
+
