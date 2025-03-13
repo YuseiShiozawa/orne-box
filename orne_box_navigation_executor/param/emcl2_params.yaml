@@ -9,10 +9,10 @@ initial_pose_x:               0           #ロボットの初期位置（x座標
 initial_pose_y:               0
 initial_pose_a:               0.0
 
-odom_fw_dev_per_fw:           0.05        #オドメトリの直進距離に基づく直進方向のノイズ量。0.19
-odom_fw_dev_per_rot:          0.0001      #オドメトリの回転量に基づく直進方向のノイズ量。
-odom_rot_dev_per_fw:          0.13        #オドメトリの直進距離に基づく回転方向のノイズ量。
-odom_rot_dev_per_rot:         0.1         #オドメトリの回転量に基づく回転方向のノイズ量。 0.2
+odom_fw_dev_per_fw:           0.19        #オドメトリの直進距離に基づく直進方向のノイズ量。0.19
+odom_fw_dev_per_rot:          0.001      #オドメトリの回転量に基づく直進方向のノイズ量。 0.0001
+odom_rot_dev_per_fw:          0.13        #オドメトリの直進距離に基づく回転方向のノイズ量。0.13
+odom_rot_dev_per_rot:         0.1        #オドメトリの回転量に基づく回転方向のノイズ量。 0.1
 
 laser_likelihood_max_dist:    0.2         #レーザーセンサの距離計測に基づく尤度を計算するときに考慮する最大距離。これ以上遠い測定値は無視されます。
 
@@ -25,7 +25,7 @@ expansion_radius_orientation: 0.2         #パーティクルを再サンプリ�
 laser_min_range:              0.0         #レーザーセンサの最小有効距離。
 laser_max_range:              100000000.0 #レーザーセンサの最大有効距離。
 
-scan_increment:               1           #レーザースキャンの間隔。1はすべてのスキャンデータを使用する設定。
+scan_increment:               1          #レーザースキャンの間隔。1はすべてのスキャンデータを使用する設定。
 
 #transform_tolerance:         0.5         #TF座標変換の許容範囲。
 #gui_publish_rate:            50.0        #可視化用データの更新頻度。
