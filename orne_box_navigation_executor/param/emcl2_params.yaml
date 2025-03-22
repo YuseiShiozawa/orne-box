@@ -9,10 +9,10 @@ initial_pose_x:               0           #ロボットの初期位置（x座標
 initial_pose_y:               0
 initial_pose_a:               0.0
 
-odom_fw_dev_per_fw:           0.19        #オドメトリの直進距離に基づく直進方向のノイズ量。0.19
+odom_fw_dev_per_fw:           0.0001      #オドメトリの直進距離に基づく直進方向のノイズ量。0.19
 odom_fw_dev_per_rot:          0.001      #オドメトリの回転量に基づく直進方向のノイズ量。 0.0001
-odom_rot_dev_per_fw:          0.13        #オドメトリの直進距離に基づく回転方向のノイズ量。0.13
-odom_rot_dev_per_rot:         0.1        #オドメトリの回転量に基づく回転方向のノイズ量。 0.1
+odom_rot_dev_per_fw:          0.001       #オドメトリの直進距離に基づく回転方向のノイズ量。0.13
+odom_rot_dev_per_rot:         0.0001        #オドメトリの回転量に基づく回転方向のノイズ量。 0.1
 
 laser_likelihood_max_dist:    0.2         #レーザーセンサの距離計測に基づく尤度を計算するときに考慮する最大距離。これ以上遠い測定値は無視されます。
 
