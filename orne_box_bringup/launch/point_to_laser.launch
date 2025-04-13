@@ -1,0 +1,20 @@
+<launch>
+  <!-- LiDAR????????????? -->
+  <arg name="cloud_in_topic" default="/rfans/surestar_points" />
+  
+  <!-- ???????????? -->
+  <arg name="scan_topic" default="/rfans_scan" />
+  
+  <!-- tf???????? -->
+  <arg name="target_frame" default="base_link" />
+
+  <node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="pointcloud_to_laserscan" output="screen">
+    <remap from="cloud_in" to="$(arg cloud_in_topic)" />
+    <remap from="scan" to="$(arg scan_topic)" />
+    <param name="min_height" value="0.0" />
+    <param name="max_height" value="5.0" />
+    <param name="angle_increment" value="0.0035" />
+    <param name="range_min" value="0.0" />
+    <param name="range_max" value="50.0" />
+  </node>
+</launch>
