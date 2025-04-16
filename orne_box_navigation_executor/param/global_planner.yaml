@@ -25,6 +25,6 @@ GlobalPlanner:
   lethal_cost: 253
   default_tolerance: 0.2
   use_quadratic: true
-  use_grid_path: false
-  orientation_mode: 1
+  use_grid_path: true
+  orientation_mode: 2
 
