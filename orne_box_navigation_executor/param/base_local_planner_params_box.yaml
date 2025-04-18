@@ -9,3 +9,6 @@ TrajectoryPlannerROS:
   min_vel_theta: -2.0
 
   meter_scoring: true
+  yaw_goal_tolerance: 0.5
+  xy_goal_tolerance: 0.4
+  escape_vel: -0.3
