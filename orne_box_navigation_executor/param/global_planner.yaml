@@ -9,7 +9,7 @@ GlobalPlanner:
   planner_window_y: 0
   orientation_window_size: 2
   use_dijkstra: false  #true
-  use_quadratic: false
+  use_quadratic: true #false 4/18
   use_grid_path: true 
   orientation_mode: 2
   lethal_cost: 128 #  128
@@ -17,4 +17,4 @@ GlobalPlanner:
   neutral_cost: 55.0 #55
   visualize_potential: false
   publish_potential: false
-#  orientation_mode: 1 # new
+  orientation_mode: 2 # out 4/18
