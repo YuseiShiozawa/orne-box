@@ -1,0 +1,17 @@
+<launch>
+  <node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="pointcloud_to_laserscan" output="screen">
+    <remap from="cloud_in" to="rfans/surestar_points"/>
+    <remap from="scan" to="tmp_scan"/>
+
+    <param name="min_height" value="2.0"/>
+    <param name="max_height" value="30.0"/>
+
+    <param name="range_min" value="0.0"/>
+    <param name="range_max" value="200.0"/>
+
+    <param name="angle_min" value="-1.57"/>
+    <param name="angle_max" value="1.57"/>
+    <param name="angle_increment" value="0.0035"/>
+  </node>
+</launch>
+
