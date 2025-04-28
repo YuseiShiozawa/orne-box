@@ -13,7 +13,7 @@
   <!--group unless="$(eval arg('emcl') == '1' or arg('emcl') == '2')"-->
   <group unless="$(eval emcl=='mode1' or emcl=='mode2')">
     <node pkg="amcl" type="amcl" name="amcl" output="screen">
-      <rosparam file="$(find orne_box_navigation_executor)/param/localization_params.yaml" command="load"/>
+      <rosparam file="$(find orne_box_navigation_executor)/param/localization_params_2.yaml" command="load"/>
       <rosparam file="$(find orne_box_navigation_executor)/param/localization_params_$(arg robot_name).yaml" command="load"/>
       <rosparam file="$(arg init_pos_file)" command="load"/>
     </node>
