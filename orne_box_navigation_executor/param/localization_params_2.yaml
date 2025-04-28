@@ -1,13 +1,13 @@
-kld_err: 0.05 
-resample_interval: 1  
-min_particles: 500  
+#kld_err: 0.05 
+#resample_interval: 1  
+#min_particles: 500  
 odom_alpha1: 0.2
 odom_alpha2: 0.2
 odom_alpha3: 0.9
 odom_alpha4: 0.4
-do_beamskip: true
-gui_publish_rate: 10.0
-odom_alpha5: 0.0 
+#do_beamskip: true
+#gui_publish_rate: 10.0
+#odom_alpha5: 0.0 
 laser_z_hit: 0.5 # 以下必須              
 laser_z_short: 0.05             
 laser_z_max: 0.05                 
