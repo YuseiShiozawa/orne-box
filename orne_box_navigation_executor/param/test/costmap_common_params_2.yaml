@@ -16,8 +16,8 @@ scan: # 必須　障害物避けるため
     #marking: true,               
     clearing: true,   # これは必須   コスト消せん   
     #inf_is_valid: true,         
-    min_obstacle_height: 0.15,    
-    max_obstacle_height: 1.0,  
+    #min_obstacle_height: 0.15,    
+    #max_obstacle_height: 1.0,  
     #raytrace_range: 9.0, # たぶんいる  
     #obstacle_range: 30.0,
   }
