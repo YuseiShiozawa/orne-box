@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<launch>
+  <arg name="robot_name" default="alpha"/>
+  <arg name="map_file"   default="$(find orne_box_navigation_executor)/maps/tsudanuma"/>
+  <arg name="odom_topic" default="/odom"/>
+  <arg name="cmd_vel"    default="/cmd_vel"/>
+
+  <node name="map_server_for_costmap" pkg="map_server" type="map_server" args="$(arg map_file)_for_costmap.yaml">
+    <remap from="/map" to="/map_for_costmap"/>
+    <param name="frame_id" value="map_for_costmap"/>
+  </node>
+
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <remap from="/odom" to="$(arg odom_topic)"/>
+    <remap from="/cmd_vel" to="$(arg cmd_vel)"/>
+    <rosparam file="$(find orne_box_navigation_executor)/param/test/costmap_common_params_2.yaml" command="load" ns="global_costmap"/>
+    <rosparam file="$(find orne_box_navigation_executor)/param/test/foot_print_$(arg robot_name)_2.yaml" command="load" ns="global_costmap"/>
+    <rosparam file="$(find orne_box_navigation_executor)/param/test/costmap_common_params_2.yaml" command="load" ns="local_costmap"/>
+    <rosparam file="$(find orne_box_navigation_executor)/param/test/foot_print_$(arg robot_name)_2.yaml" command="load" ns="local_costmap"/>
+    <rosparam file="$(find orne_box_navigation_executor)/param/test/local_costmap_params_2.yaml" command="load"/>
+    <rosparam file="$(find orne_box_navigation_executor)/param/test/global_costmap_params_2.yaml" command="load"/>
+    <rosparam file="$(find orne_box_navigation_executor)/param/test/move_base_params_2.yaml" command="load"/>
+    <rosparam file="$(find orne_box_navigation_executor)/param/test/global_planner_2.yaml" command="load"/>
+    <rosparam file="$(find orne_box_navigation_executor)/param/test/base_local_planner_params_box_2.yaml" command="load"/>
+    
+    <rosparam file="$(find orne_box_navigation_executor)/param/test/recovery_params_2.yaml" command="load"/>
+  </node>
+</launch>
