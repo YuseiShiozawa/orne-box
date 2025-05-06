@@ -1,14 +1,16 @@
-local_costmap:
-  global_frame: odom           #大事そうだけど変化なし mapを推奨されている
+## local_costmap:
+  #global_frame: odom           #大事そうだけど変化なし mapを推奨されている
   #robot_base_frame: base_link   # defaultと一緒
   #update_frequency: 5.0      # defaultと一緒
-  publish_frequency: 2.0        # 関係ない
+ # publish_frequency: 2.0        # 関係なくない
   #static_map: false           
-  rolling_window: true          # trueじゃないと動かない
+##  rolling_window: true          # trueじゃないと動かない
   #resolution: 0.05            
   #width: 8.0                    
- # height: 8.0                  
+  #height: 8.0                  
   #transform_tolerance: 0.5      
   #inflation_radius: 0.20      
  
   ## この中のどれかが原因, まだobstacleとinflationが動いてない
+local_costmap:       
+  rolling_window: true   
