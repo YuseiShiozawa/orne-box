@@ -1,6 +1,6 @@
 odom_model_type: diff              # オドメトリのモデルタイプ（"diff"は差動型を意味する）。
 odom_alpha5: 0.1                   # オドメトリ誤差に関連する係数（α5）。
-transform_tolerance: 0.2           # TF座標変換の許容時間（秒単位）。
+transform_tolerance: 0.5           # TF座標変換の許容時間（秒単位）。
 gui_publish_rate: 10.0             # AMCLの可視化情報を配信する頻度（Hz単位）。
 laser_max_beams: 30                # レーザスキャンで使用する最大ビーム数。
 min_particles: 500                 # パーティクルの最小数。

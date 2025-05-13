@@ -154,7 +154,7 @@ Visualization Manager:
       Size (Pixels): 3
       Size (m): 0.20000000298023224
       Style: Flat Squares
-      Topic: /scan
+      Topic: /rfans/surestar_scan
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
