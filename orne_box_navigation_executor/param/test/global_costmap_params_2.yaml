@@ -23,4 +23,4 @@ global_costmap:
     - name: inflationlayer
       type: costmap_2d::InflationLayer
    StaticLayer: 
-     map_topic: map_for_costmap
+     map_topic: map

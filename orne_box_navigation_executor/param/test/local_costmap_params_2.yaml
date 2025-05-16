@@ -14,3 +14,4 @@
   ## この中のどれかが原因, まだobstacleとinflationが動いてない
 local_costmap:       
   rolling_window: true   
+  cost_scaling_factor: 20

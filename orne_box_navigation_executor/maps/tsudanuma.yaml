@@ -1,5 +1,5 @@
-#image: 25_tsudanuma_rotate.png
-image: tsudanuma.png
+image: 25_tsudanuma_rotate_200m.png
+#image: tsudanuma.png
 resolution: 0.0893
 origin: [-100.000000, -172.000000, 0.000000]
 negate: 0
