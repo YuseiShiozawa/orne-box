@@ -30,4 +30,5 @@ scan:
     data_type: LaserScan,     
     clearing: true,   
     obstacle_range: 15,
+    raytrace_range: 16,
   }
