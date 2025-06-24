@@ -7,8 +7,9 @@ TrajectoryPlannerROS:
   #acc_lim_theta: 0.8
   max_vel_theta: 2.0
   min_vel_theta: -2.0
-
-  yaw_goal_tolerance: 0.5 # add
-  xy_goal_tolerance: 0.4 # add
+  sim_time: 3.4
+  
+  yaw_goal_tolerance: 1 # add
+  xy_goal_tolerance: 0.8 # add
   escape_vel: -0.3 # add
   meter_scoring: true

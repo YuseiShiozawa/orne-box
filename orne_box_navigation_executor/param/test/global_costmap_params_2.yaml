@@ -23,5 +23,8 @@ global_costmap:
       type: costmap_2d::StaticLayer
     - name: inflationlayer
       type: costmap_2d::InflationLayer
+#    - name: obstaclelayer
+ #     type: costmap_2d::ObstacleLayer
+     
    StaticLayer: 
      map_topic: map
