@@ -1,7 +1,7 @@
 local_costmap:
   global_frame: odom           #大事そうだけど変化なし mapを推奨されている
   #robot_base_frame: base_link   # defaultと一緒
-  update_frequency: 2.5       # default5.0と一緒
+  update_frequency: 2.3       # 2.5
   publish_frequency: 2.0        # 関係ない rvizでみたいからやっぱいる
   #static_map: false           
   rolling_window: true          # trueじゃないと動かない
