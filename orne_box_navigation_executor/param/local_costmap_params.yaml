@@ -1,0 +1,2 @@
+local_costmap:
+ rolling_window: true

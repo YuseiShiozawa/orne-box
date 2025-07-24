@@ -1,0 +1,8 @@
+publish_frequency: 2.0
+observation_sources: scan
+scan:
+{
+ data_type: LaserScan,
+clearing: true,
+}
+
