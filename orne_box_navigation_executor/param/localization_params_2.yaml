@@ -11,6 +11,6 @@ transform_tolerance: 0.5
 recovery_alpha_slow: 0.0          # スローリカバリ率の初期値。
 recovery_alpha_fast: 0.0          # ファストリカバリ率の初期値。
 
-
+#max_particles: 150
 
 
