@@ -1,0 +1,8 @@
+footprint: [[0.433, 0.254], [-0.187, 0.254], [-0.187, -0.254], [0.433, -0.254]]
+publish_frequency: 2.0
+observation_sources: scan
+scan:
+  {
+    data_type: LaserScan,
+    clearing: true,
+  }

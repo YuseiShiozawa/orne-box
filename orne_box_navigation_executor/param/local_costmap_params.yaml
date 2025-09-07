@@ -1,0 +1,3 @@
+local_costmap:
+  rolling_window: true
+  update_frequency: 3.0
