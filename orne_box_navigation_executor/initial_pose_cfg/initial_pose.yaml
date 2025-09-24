@@ -1,6 +1,6 @@
 # initial pose config
-initial_pose_x: -10.0
-initial_pose_y: -18.0
+initial_pose_x: -3.7
+initial_pose_y: -5.5
 initial_pose_a: -2.3
 #initial_cov_xx: 0.0
 #initial_cov_yy: 0.0

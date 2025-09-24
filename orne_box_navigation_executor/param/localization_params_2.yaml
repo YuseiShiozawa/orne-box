@@ -1,8 +1,8 @@
 recovery_alpha_slow: 0.0 # おまえもかい
 recovery_alpha_fast: 0.0  # こいつが悪い 
-odom_alpha1: 0.2
-odom_alpha2: 0.2
-odom_alpha3: 1.8 # 1.8
-odom_alpha4: 0.9
+odom_alpha1: 0.2 # 0.2
+odom_alpha2: 0.2 # 0.2
+odom_alpha3: 0.9 # 1.9
+odom_alpha4: 0.2 # 0.2
 
-max_particles: 2500
+#max_particles: 2500
