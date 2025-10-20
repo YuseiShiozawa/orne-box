@@ -1,4 +1,5 @@
 global_costmap:
-   update_frequency: 0.2   #0.2
+   update_frequency: 0.1   #0.2
    map_topic: map # costmap用を使うか否か
    static_map: true  # 必須 static layerが機能しない
+   transform_tolerance: 0.5
