@@ -112,7 +112,7 @@ Visualization Manager:
       Size (Pixels): 3
       Size (m): 0.20000000298023224
       Style: Flat Squares
-      Topic: /scan
+      Topic: /rfans/surestar_scan
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
@@ -626,7 +626,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 10
+      Distance: 67.45758819580078
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -634,17 +634,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0
-        Y: 0
+        X: 11.601036071777344
+        Y: 7.888468265533447
         Z: 0
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.1403979063034058
+      Pitch: 1.5697963237762451
       Target Frame: base_link
-      Yaw: 0.7703981995582581
+      Yaw: 0.2603985369205475
     Saved:
       - Class: rviz/ThirdPersonFollower
         Distance: 49.60908126831055
